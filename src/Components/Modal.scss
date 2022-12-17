@@ -1,0 +1,50 @@
+.modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        position: fixed;
+        display: flex;
+        width: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.10s;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal-content {
+            padding: 30px;
+            width: 90%;
+            height: 90%;
+            background-color: rgb(226, 224, 224);
+            position: relative;
+            border-radius: 10px;
+
+            &-close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+
+            &-footer {
+                margin-top: 30px;
+
+                .button-save {
+                    background: green;
+                    color: #fff;
+                    margin-right: 20px;
+                }
+
+                .button-close {
+                    background: red;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
